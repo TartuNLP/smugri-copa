@@ -1,0 +1,5 @@
+task: smugricopa_mc_liv_Latn
+dataset_path: tartuNLP/smugri-copa
+dataset_name: liv_Latn
+doc_to_text: !function utils.doc_to_text_liv_Latn
+include: _common_yaml

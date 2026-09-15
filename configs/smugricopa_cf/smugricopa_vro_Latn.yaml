@@ -1,0 +1,6 @@
+task: smugricopa_vro_Latn
+dataset_path: tartuNLP/smugri-copa
+dataset_name: vro_Latn
+doc_to_text: !function utils.doc_to_text_vro_Latn
+include: _common_yaml
+

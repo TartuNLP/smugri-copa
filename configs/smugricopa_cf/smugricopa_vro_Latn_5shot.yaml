@@ -1,0 +1,4 @@
+include: smugricopa_vro_Latn.yaml
+task: smugricopa_vro_Latn_5shot
+num_fewshot: 5
+
