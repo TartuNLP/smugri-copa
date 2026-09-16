@@ -1,8 +1,8 @@
 # SMUGRI-COPA
 
-LM Evaluation Harness configurations for evaluating SMUGRI-COPA in Võro and Livonian.
+[🤗 tartuNLP/smugri-copa](https://huggingface.co/datasets/tartuNLP/smugri-copa)
 
-Dataset: [tartuNLP/smugri-copa](https://huggingface.co/datasets/tartuNLP/smugri-copa)
+LM Evaluation Harness configurations for evaluating SMUGRI-COPA in Võro and Livonian.
 
 ## Usage
 
@@ -14,10 +14,12 @@ Each provides zero-shot and 5-shot tasks for Võro and Livonian.
 Example evaluation from the repository root:
 
 ```bash
+TASKS="smugricopa_liv_Latn,smugricopa_vro_Latn,smugricopa_mc_liv_Latn,smugricopa_mc_vro_Latn,smugricopa_liv_Latn_5shot,smugricopa_vro_Latn_5shot,smugricopa_mc_liv_Latn_5shot,smugricopa_mc_vro_Latn_5shot"
+
 lm_eval --model hf \
   --model_args pretrained=${MODEL},dtype=bfloat16,add_bos_token=True \
-  --tasks smugricopa_mc_vro_Latn_5shot,smugricopa_mc_liv_Latn_5shot \
-  --include_path ./configs/smugricopa_mc \
+  --tasks ${TASKS} \
+  --include_path ./configs \
   --batch_size ${BATCH_SIZE} \
   --log_samples \
   --show_config \
